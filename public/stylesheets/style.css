@@ -19,3 +19,7 @@ h1 {
 h3 {
   font-family: 'Indie Flower', cursive;
 }
+
+li:hover {
+  cursor: pointer;
+}
