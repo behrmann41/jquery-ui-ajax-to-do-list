@@ -9,4 +9,13 @@ a {
 
 * {
   font-size: 24px;
+  font-family: 'Indie Flower', cursive;
+}
+
+h1 {
+  font-family: 'Indie Flower', cursive;
+}
+
+h3 {
+  font-family: 'Indie Flower', cursive;
 }
