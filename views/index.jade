@@ -2,14 +2,24 @@ extends layout
 
 block content
   .container
-    h1 My Task List
-  .container
     .row
-      .col-md-4
+      .col-md-5#tasks
+        h1 My Task List
         #accordion
-          h3 First header
-          div First content panel
-          h3 Second header
-          div Second content panel
-          h3 Third header
-          div Third content panel
+          h3 Technical
+          ul
+            li one
+            li two
+          h3 Service
+          ul
+            li hello
+            li goodbye
+          h3 Development
+          ul
+            li Pickup Cat
+            li Move Dog
+      .col-md-5.col-md-offset-1#plan
+        h1 Daily Plan
+        .ui-widget-content
+          ol
+            li.placeholder Add your items here
