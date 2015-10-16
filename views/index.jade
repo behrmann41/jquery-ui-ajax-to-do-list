@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    h1 My Task List
+  .container
+    .row
+      .col-md-4
+        #accordion
+          h3 First header
+          div First content panel
+          h3 Second header
+          div Second content panel
+          h3 Third header
+          div Third content panel
