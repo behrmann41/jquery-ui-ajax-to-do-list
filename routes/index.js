@@ -5,7 +5,9 @@ var Tasks = db.get('tasks')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  Tasks.find({}, function (err, tasks){
+    res.render('index', { title: 'Express', allTasks: tasks });
+  })
 });
 
 module.exports = router;

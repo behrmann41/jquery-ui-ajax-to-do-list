@@ -6,18 +6,10 @@ block content
       .col-md-5#tasks
         h1 My Task List
         #accordion
-          h3 Technical
-          ul
-            li one
-            li two
-          h3 Service
-          ul
-            li hello
-            li goodbye
-          h3 Development
-          ul
-            li Pickup Cat
-            li Move Dog
+          for task in allTasks
+            h3= task.catagory
+            ul
+              li= task.description
       .col-md-5.col-md-offset-1#plan
         h1 Daily Plan
         .ui-widget-content
