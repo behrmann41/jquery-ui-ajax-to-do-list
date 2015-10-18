@@ -12,14 +12,18 @@ a {
   font-family: 'Indie Flower', cursive;
 }
 
-h1 {
+h1, h3, h4 {
   font-family: 'Indie Flower', cursive;
 }
 
-h3 {
+.modal-header{
   font-family: 'Indie Flower', cursive;
 }
 
 li:hover {
   cursor: pointer;
+}
+
+#addtask {
+  margin-top: 15px;
 }

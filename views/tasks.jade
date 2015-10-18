@@ -11,3 +11,30 @@ block content
         .ui-widget-content
           ol
             li.placeholder Add your items here
+    .row
+      .col-md-2
+        button#addtask.btn.btn-primary(type='button', data-toggle='modal', data-target='#myModal')
+          | Add Task
+    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+          .modal-dialog(role='document')
+            .modal-content
+              form.form-horizontal(action='/tasks', method='POST')
+                .modal-header
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  h4#myModalLabel.modal-title Add a new task
+                .modal-body
+                  .form-group
+                    label.col-sm-3.label-control(for='catagory') Catagory:
+                    .col-sm-9
+                      select#catagory.form-control(name='catagory')
+                        option(value='Technical') Technical
+                        option(value='Service') Service
+                        option(value='Development') Development
+                  .form-group
+                    label.col-sm-3.label-control(for='description') Description:
+                    .col-sm-9
+                      input#description.form-control(type='text' name='description' placeholder='Description' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Description'" required)
+                .modal-footer
+                  button.btn.btn-default(type='button', data-dismiss='modal') Close
+                  button.btn.btn-primary(type='submit') Add Task

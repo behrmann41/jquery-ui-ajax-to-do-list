@@ -14,4 +14,14 @@ router.get('/', function (req, res, next){
   var username = req.session.user
   res.render('tasks', { title: 'Tasks', user: username})
 })
+
+
+router.post('/', function (req, res, next){
+  var username = req.session.user
+  Tasks.insert({  description: req.body.description,
+                  catagory: req.body.catagory
+                })
+  res.render('tasks', { title: 'Tasks', user: username})
+})
+
 module.exports = router;
